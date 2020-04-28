@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <style>
+        body {
+  background: #2f313d;
+  color: #46485c;
+  font-family: sans-serif;
+}
+
+img [type="imagen"] {
+  border: 10px solid #fffff ;
+  border-radius: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h2 {
+  color: #5563fa;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #5563fa;
+  text-decoration: none;
+}
+
+.login {
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -184px 0px 0px -155px;
+  background: rgba(0, 0, 0, 0.233);
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px rgba(0, 153, 255, 0.719),inset 0px 1px 0px rgba(47, 61, 250, 0.07)
+}
+
+input[type="text"], input[type="password"] {
+  width: 250px;
+  padding: 25px 0px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  outline: none;
+  color: #46485c;
+  font-size: 12px;
+}
+input[type=checkbox] {
+  display: none;
+}
+
+label {
+  display: block;
+  position: absolute;
+  margin-right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  content: "";
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 3px solid #46485c;
+}
+
+#remember:checked ~ label[for=remember] {
+  background: #00ccff;
+}
+
+input[type="submit"] {
+  background: #074366;
+  border: 0;
+  width: 250px;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+input[type="submit"]:hover {
+  background: #337ff1;
+}
+
+.forgot {
+  margin-top: 30px;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+}
+.forgot:hover {
+  margin-top: 30px;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+  color: #6d7781;
+}
+
+.remember {
+  padding: 30px 0px;
+  font-size: 12px;
+  text-indent: 25px;
+  line-height: 15px;
+}
+
+::-webkit-input-placeholder {
+  color: #46485c;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: all 0.2s linear;
+  transform: translate(10px, 0);
+  opacity: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class='login'>
+        <img name="imagen" src="./img/foto-perfil.jpg" alt="">
+        <h2>Sign in</h2>
+        <input name='username' placeholder='Username' type='text'/>
+        <input id='pw' name='password' placeholder='Password' type='password'/>
+        <div class='remember'>
+          <input checked='' id='remember' name='remember' type='checkbox'/>
+          <label for='remember'></label>Remember me
+        </div>
+        <input type='submit' value='Sign in'/>
+        <a class='forgot' href='#'>Forgot your password?</a>
+      </div>
+      
+      <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</body>
+</html>
